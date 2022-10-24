@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+message Config {
+    string name = 1;
+    string value = 2;
+    string type = 3;
+}
+
+message ConfigRequest {
+    string name = 1;
+}
+service ConfigService {
+    rpc GetConfig (ConfigRequest) returns (Config) {}
+}

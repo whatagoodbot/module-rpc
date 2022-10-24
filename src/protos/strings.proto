@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+message String {
+    string value = 1;
+    string type = 2;
+}
+
+message StringRequest {
+    string id = 1;
+}
+service StringService {
+    rpc GetAllStrings (Empty) returns (StringList) {}
+    rpc GetString (StringRequest) returns (String) {}
+}
+
+message Empty {}
+
+message StringList {
+   repeated String strings = 1;
+}

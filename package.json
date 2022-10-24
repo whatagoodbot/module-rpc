@@ -1,0 +1,25 @@
+{
+  "name": "rpc-proto-files",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whatagoodbot/rpc-proto-files.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/whatagoodbot/rpc-proto-files/issues"
+  },
+  "homepage": "https://github.com/whatagoodbot/rpc-proto-files#readme",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.7.3",
+    "@grpc/proto-loader": "^0.7.3"
+  }
+}
