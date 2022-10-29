@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+import "album.proto";
+
+service Wiki {
+  rpc getArtist (ArtistRequest) returns (Artist) {}
+  rpc getAlbum (AlbumRequest) returns (Album) {}
+}

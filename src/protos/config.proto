@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-message Config {
+message ConfigResponse {
     string name = 1;
     string value = 2;
     string type = 3;
@@ -9,6 +9,6 @@ message Config {
 message ConfigRequest {
     string name = 1;
 }
-service ConfigService {
-    rpc GetConfig (ConfigRequest) returns (Config) {}
+service Config {
+    rpc GetConfig (ConfigRequest) returns (ConfigResponse) {}
 }

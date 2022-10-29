@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+import "artist.proto";
+
+message Album {
+  string mbid = 1;
+  string name = 2;
+  string summary = 3;
+  optional string detail = 4;
+  Artist artist = 5;
+}
+
+message AlbumRequest {
+  string artist = 1;
+  string album = 2;
+}

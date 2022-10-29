@@ -2,22 +2,23 @@ syntax = "proto3";
 
 message Empty {}
 
-message User {
+message UserResponse {
     string id = 1;
     string name = 2;
     string lastWelcomed = 3;
     string lastDisconnected = 4;
+    bool admin = 5;
 }
 
 message UserRequest {
     string id = 1;
 }
 
-service UserService {
+service Users {
   rpc getUsers (Empty) returns (UserList) {}
-  rpc getUser (UserRequest) returns (User) {}
+  rpc getUser (UserRequest) returns (UserResponse) {}
 }
 
 message UserList {
-  repeated User users = 1;
+  repeated UserResponse users = 1;
 }

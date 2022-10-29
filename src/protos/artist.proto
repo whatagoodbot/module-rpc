@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+message Artist {
+  optional string mbid = 1;
+  string name = 2;
+  string summary = 3;
+  optional string detail = 4;
+  string image = 5;
+}
+
+message ArtistRequest {
+  string artist = 1;
+}
