@@ -1,8 +1,8 @@
 syntax = "proto3";
 
 message StringResponse {
-    string value = 1;
-    string type = 2;
+    string name = 1;
+    string value = 2;
 }
 
 message StringRequest {
@@ -10,21 +10,17 @@ message StringRequest {
 }
 
 message MultiStringRequest {
-    repeated string strings = 1;
+    repeated string names = 1;
 }
 
 service Strings {
     rpc getAllStrings (Empty) returns (StringList) {}
-    rpc getManyStrings (MultiStringRequest) returns (StringManyResponse) {}
+    rpc getManyStrings (MultiStringRequest) returns (StringList) {}
     rpc getString (StringRequest) returns (StringResponse) {}
 }
 
 message Empty {}
 
 message StringList {
-   repeated StringResponse strings = 1;
-}
-
-message StringManyResponse {
-    repeated StringResponse strings = 1;
+   repeated StringResponse names = 1;
 }
