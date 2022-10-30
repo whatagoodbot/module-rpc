@@ -6,11 +6,11 @@ message StringResponse {
 }
 
 message StringRequest {
-    string name = 1;
+    string string = 1;
 }
 
 message MultiStringRequest {
-    repeated string names = 1;
+    repeated string strings = 1;
 }
 
 service Strings {
@@ -22,5 +22,5 @@ service Strings {
 message Empty {}
 
 message StringList {
-   repeated StringResponse names = 1;
+   repeated StringResponse strings = 1;
 }

@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+message CommandResponse {
+    string command = 1;
+    string service = 2;
+    string topic = 3;
+}
+
+message CommandRequest {
+    string command = 1;
+}
+
+service Commands {
+    rpc getAllStrings (Empty) returns (CommandList) {}
+    rpc getString (CommandRequest) returns (CommandResponse) {}
+}
+
+message Empty {}
+
+message CommandList {
+   repeated CommandResponse commands = 1;
+}
