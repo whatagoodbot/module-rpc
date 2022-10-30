@@ -11,8 +11,8 @@ message CommandRequest {
 }
 
 service Commands {
-    rpc getAllStrings (Empty) returns (CommandList) {}
-    rpc getString (CommandRequest) returns (CommandResponse) {}
+    rpc getAllCommands (Empty) returns (CommandList) {}
+    rpc getCommand (CommandRequest) returns (CommandResponse) {}
 }
 
 message Empty {}
