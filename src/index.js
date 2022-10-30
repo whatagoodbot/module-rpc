@@ -19,6 +19,7 @@ export const clientCreds = grpc.credentials.createInsecure()
 
 export const album = grpc.loadPackageDefinition(protoLoader.loadSync(`${__dirname}/protos/album.proto`, protoOptions))
 export const artist = grpc.loadPackageDefinition(protoLoader.loadSync(`${__dirname}/protos/artist.proto`, protoOptions))
+export const commands = grpc.loadPackageDefinition(protoLoader.loadSync(`${__dirname}/protos/commands.proto`, protoOptions))
 export const config = grpc.loadPackageDefinition(protoLoader.loadSync(`${__dirname}/protos/config.proto`, protoOptions))
 export const strings = grpc.loadPackageDefinition(protoLoader.loadSync(`${__dirname}/protos/strings.proto`, protoOptions))
 export const users = grpc.loadPackageDefinition(protoLoader.loadSync(`${__dirname}/protos/users.proto`, protoOptions))
