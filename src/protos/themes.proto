@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+message ThemeResponse {
+    string id = 1;
+}
+
+message ThemeRequest {
+    string room = 1;
+}
+
+service Themes {
+    rpc getCurrentTheme (ThemeRequest) returns (ThemeResponse) {}
+}
+
+

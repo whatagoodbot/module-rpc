@@ -3,7 +3,6 @@ syntax = "proto3";
 message ConfigResponse {
     string name = 1;
     string value = 2;
-    string type = 3;
 }
 
 message ConfigRequest {
