@@ -23,6 +23,5 @@ export const commands = grpc.loadPackageDefinition(protoLoader.loadSync(`${__dir
 export const config = grpc.loadPackageDefinition(protoLoader.loadSync(`${__dirname}/protos/config.proto`, protoOptions))
 export const strings = grpc.loadPackageDefinition(protoLoader.loadSync(`${__dirname}/protos/strings.proto`, protoOptions))
 export const users = grpc.loadPackageDefinition(protoLoader.loadSync(`${__dirname}/protos/users.proto`, protoOptions))
-export const activeUsers = grpc.loadPackageDefinition(protoLoader.loadSync(`${__dirname}/protos/activeUsers.proto`, protoOptions))
 export const wiki = grpc.loadPackageDefinition(protoLoader.loadSync(`${__dirname}/protos/wiki.proto`, protoOptions))
 export const themes = grpc.loadPackageDefinition(protoLoader.loadSync(`${__dirname}/protos/themes.proto`, protoOptions))
