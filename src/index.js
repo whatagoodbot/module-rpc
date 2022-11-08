@@ -25,3 +25,4 @@ export const strings = grpc.loadPackageDefinition(protoLoader.loadSync(`${__dirn
 export const users = grpc.loadPackageDefinition(protoLoader.loadSync(`${__dirname}/protos/users.proto`, protoOptions))
 export const wiki = grpc.loadPackageDefinition(protoLoader.loadSync(`${__dirname}/protos/wiki.proto`, protoOptions))
 export const themes = grpc.loadPackageDefinition(protoLoader.loadSync(`${__dirname}/protos/themes.proto`, protoOptions))
+export const themeResults = grpc.loadPackageDefinition(protoLoader.loadSync(`${__dirname}/protos/themeResults.proto`, protoOptions))
