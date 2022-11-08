@@ -6,7 +6,8 @@ message ThemeWinnerResponse {
 }
 
 message ThemeResultsRequest {
-    int32 id = 1;
+    int32 quickTheme = 1;
+    string room = 2;
 }
 
 service ThemeResults {
