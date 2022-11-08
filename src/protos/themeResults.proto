@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+message ThemeWinnerResponse {
+    string user = 1;
+    int32 score = 2;
+}
+
+message ThemeResultsRequest {
+    int32 id = 1;
+}
+
+service ThemeResults {
+    rpc getThemeWinner (ThemeResultsRequest) returns (ThemeWinnerResponse) {}
+}
