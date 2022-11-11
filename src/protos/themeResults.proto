@@ -10,6 +10,17 @@ message ThemeResultsRequest {
     string room = 2;
 }
 
+message ThemeLeaderboardResponse {
+    repeated ThemeWinnerResponse themeLeaders = 1;
+}
+
+message ThemeLeaderboardRequest {
+    repeated int32 quickThemeIds = 1;
+    string room = 2;
+}
+
 service ThemeResults {
     rpc getThemeWinner (ThemeResultsRequest) returns (ThemeWinnerResponse) {}
+    rpc getThemeLeaderboard (ThemeLeaderboardRequest) returns (ThemeLeaderboardResponse) {}
+    rpc getCurrentThemeLeaderboard (ThemeResultsRequest) returns (ThemeLeaderboardResponse) {}
 }
