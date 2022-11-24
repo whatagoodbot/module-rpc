@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+message lastfm {
+    string api_key = 1;
+    string api_secret = 2;
+    string username = 3;
+    string password =4;
+}
+
+message spotify {
+    string starredPlaylist = 1;
+}
+
+message botConfig {
+    repeated string commandIdentifiers = 0;
+}
+
+message RoomResponse {
+    string id = 1;
+    string slug = 2;
+    string name = 3;
+    lastfm lastfm = 4;
+    spotify spotify = 5;
+    botConfig botConfig = 6;
+    bool isEnabled = 7;
+    string greeting = 8;
+}
+
+message RoomRequest {
+    string room = 1;
+}
+
+message RoomsRequest {
+    string client = 1;
+}
+
+service Rooms {
+    rpc getRooms (RoomsRequest) returns (RoomList) {}
+    rpc getRoom (RoomRequest) returns (RoomResponse) {}
+}
+
+message RoomList {
+    repeated RoomResponse rooms = 1;
+  }

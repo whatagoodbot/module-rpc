@@ -7,15 +7,18 @@ message CommandResponse {
 }
 
 message CommandRequest {
-    string command = 1;
+    string room = 1;
+    string command = 2;
+}
+
+message CommandListRequest {
+    string room = 1;
 }
 
 service Commands {
-    rpc getAllCommands (Empty) returns (CommandList) {}
+    rpc getAllCommands (CommandListRequest) returns (CommandList) {}
     rpc getCommand (CommandRequest) returns (CommandResponse) {}
 }
-
-message Empty {}
 
 message CommandList {
    repeated CommandResponse commands = 1;
