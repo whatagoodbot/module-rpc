@@ -13,6 +13,7 @@ message spotify {
 
 message botConfig {
     repeated string commandIdentifiers = 0;
+    bool richText = 1;
 }
 
 message RoomResponse {
